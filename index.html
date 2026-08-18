@@ -119,11 +119,11 @@
         <div id="camBox" class="panel">
           <div class="camhead">Camera<span class="spacer"></span>
             <span class="toggle" id="viewToggle">
-              <button id="vCam" class="on">Cam</button><button id="vMask">Mask</button>
+              <button type="button" id="vCam" class="on">Cam</button><button type="button" id="vMask">Mask</button>
             </span>
           </div>
           <div id="camWrap">
-            <video id="cam" playsinline autoplay muted></video>
+            <video id="cam" playsinline muted></video>
             <canvas id="hud" width="640" height="480"></canvas>
           </div>
         </div>
@@ -142,8 +142,8 @@
       <div class="panel">
         <h2>Tuning</h2>
         <div class="toprow">
-          <button class="cta ghost" id="centerBtn">◎ Set Center</button>
-          <button class="fireBtn on" id="fireBtn">◉ Auto-fire</button>
+          <button type="button" class="cta ghost" id="centerBtn">◎ Set Center</button>
+          <button type="button" class="fireBtn on" id="fireBtn">◉ Auto-fire</button>
         </div>
         <div class="row"><label>Bright</label><input type="range" id="thr" min="120" max="255" step="1" value="210"></div>
         <div class="row"><label>Deadzone</label><input type="range" id="dz" min="0.03" max="0.25" step="0.01" value="0.08"></div>
@@ -152,10 +152,10 @@
       <div class="panel">
         <h2>Buttons</h2>
         <div class="pad">
-          <button data-btn="4">▲</button><button data-btn="6">◄</button>
-          <button data-btn="7">►</button><button data-btn="5">▼</button>
-          <button data-btn="8">A</button><button data-btn="0">B</button>
-          <button data-btn="3">START</button><button data-btn="2">SEL</button>
+          <button type="button" data-btn="4">▲</button><button type="button" data-btn="6">◄</button>
+          <button type="button" data-btn="7">►</button><button type="button" data-btn="5">▼</button>
+          <button type="button" data-btn="8">A</button><button type="button" data-btn="0">B</button>
+          <button type="button" data-btn="3">START</button><button type="button" data-btn="2">SEL</button>
         </div>
       </div>
       <div class="panel">
@@ -176,7 +176,7 @@
       <h2>Load game</h2>
       <label>Your legally-owned NES <code>.nes</code> ROM</label>
       <input type="file" id="rom" accept=".nes,.zip,.fds,.unif">
-      <button class="cta" id="startBtn" disabled>Insert Cartridge</button>
+      <button type="button" class="cta" id="startBtn" disabled>Insert Cartridge</button>
       <div class="note">Runs fully in your browser. Serve over <code>http://localhost</code> — the camera needs it.
         After it boots: dim the room, point your phone flash at the camera, flip <b>Mask</b> and raise
         <b>Bright</b> until only the flash glows, then <b>Set Center</b>. Jump = jab the light toward the
